@@ -1,4 +1,9 @@
-region = eu-west-3 
-vpc_cidr = 172.16.0.0/16
-wavelength-subnet-cidr = 172.16.100.0/28
-availabilityzone_wavelength = eu-west-3-dss-wlz-1a
+region                      = "eu-west-3"
+vpc_cidr                    = "172.16.0.0/16"
+wavelength_subnet_cidr      = "172.16.100.0/28"
+availabilityzone_wavelength = "eu-west-3-wl1-sn-dkr-1a"
+project_identifier           = "WLZ_Project"
+instance_identifier_wavelength = "WLZ_EC2"
+wavelength_subnet_identifier = "WLZ_Subnet"
+instance_type_wavelength     = "t3.medium"
+ec2_count                    = 2
