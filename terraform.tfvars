@@ -7,3 +7,4 @@ instance_identifier_wavelength = "WLZ_EC2"
 wavelength_subnet_identifier = "WLZ_Subnet"
 instance_type_wavelength     = "t3.medium"
 ec2_count                    = 2
+ami_id = "ami-0280274a2bd225c3d"
