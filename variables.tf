@@ -42,3 +42,8 @@ variable "ec2_count" {
   default     = 1
   description = "Number of EC2 instances to create"
 }
+variable "ami_id" {
+  type        = string
+  description = "AMI ID for EC2"
+}
+
