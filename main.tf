@@ -18,3 +18,14 @@ module "compute" {
   instance_subnet_wavelength     = module.vpc.wavelength_subnet
   ami_id                             = var.ami_id
 }
+
+terraform {
+  backend "s3" {
+    bucket         = "my-terraform-state-bucket"
+    key            = "env/dev/terraform.tfstate"
+    region         = "eu-west-3"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
+  }
+}
+
