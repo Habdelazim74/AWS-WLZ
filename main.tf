@@ -21,7 +21,7 @@ module "compute" {
 
 terraform {
   backend "s3" {
-    bucket         = "tfstate-bucket"
+    bucket         = "terraform-state-sonatel"
     key            = "env/dev/terraform.tfstate"
     region         = "eu-west-3"
     encrypt        = true
