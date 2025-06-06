@@ -30,4 +30,17 @@ terraform {
   }
 }
 
+resource "aws_vpc_endpoint" "s3_endpoint" {
+  vpc_id            = module.vpc.vpc_id  # or aws_vpc.vpc.id if local
+  service_name      = "com.amazonaws.${var.region}.s3"
+  vpc_endpoint_type = "Gateway"
+
+  route_table_ids = [
+    module.vpc.route_table_id  # adjust if needed
+  ]
+
+  tags = {
+    Name = "VPC Endpoint for S3"
+  }
+}
 
