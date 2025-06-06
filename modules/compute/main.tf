@@ -19,7 +19,7 @@ data "aws_ami" "amazon-linux" {
 
 # Creating Wavelength zone EC2 instance
 resource "aws_instance" "ec2_instance_wavelength" {
-  ami           = data.aws_ami.amazon-linux.id
+ami = var.ami_id
   instance_type = var.instance_type_wavelength
   subnet_id     = var.instance_subnet_wavelength
   key_name      = aws_key_pair.ec2-key-pair.key_name
