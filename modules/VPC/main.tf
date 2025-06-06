@@ -47,7 +47,7 @@ resource "aws_route_table" "vpc_routetable_wavelength" {
 }
 
 #Association of Wavelength subnet
-resource "aws_route_table_association" "public_subnet_association" {
+resource "aws_route_table_association" "wavelength__subnet_association" {
   subnet_id      = aws_subnet.wavelength_subnets.id
   route_table_id = aws_route_table.vpc_routetable_wavelength.id
 
