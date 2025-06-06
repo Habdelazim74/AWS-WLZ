@@ -1,21 +1,4 @@
 data "aws_caller_identity" "current" {}
-# Data source for AMI used by EC2 instances
-data "aws_ami" "amazon-linux" {
-  most_recent = true
-  owners      = ["amazon"]
-  filter {
-    name   = "name"
-    values = ["al2023-ami-2023.3.20240131.0-kernel-6.1-x86_64"]
-  }
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-  filter {
-    name   = "architecture"
-    values = ["x86_64"]
-  }
-}
 
 # Creating Wavelength zone EC2 instance
 resource "aws_instance" "ec2_instance_wavelength" {
