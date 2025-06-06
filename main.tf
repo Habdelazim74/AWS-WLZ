@@ -16,4 +16,5 @@ module "compute" {
   instance_identifier_wavelength = var.instance_identifier_wavelength
   availabilityzone_wavelength    = var.availabilityzone_wavelength
   instance_subnet_wavelength     = module.vpc.wavelength_subnet
+  ami_id                             = var.ami_id
 }
