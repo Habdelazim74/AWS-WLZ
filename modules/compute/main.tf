@@ -79,7 +79,7 @@ resource "aws_kms_alias" "ebs-key" {
 
 #Creation of Elastic IP for Wavelength EC2
 resource "aws_eip" "wavelength_ip" {
-  network_border_group = "sn-dkr-1"
+  network_border_group = "eu-west-3-dss-wlz-1
   instance             = aws_instance.ec2_instance_wavelength.id
 
   tags = {
