@@ -37,3 +37,8 @@ variable "key_pair_rsabits" {
   description = "Values for keypair generation"
   default = 4096
 }
+variable "ami_id" {
+  description = "AMI ID for EC2 instance"
+  type        = string
+}
+
