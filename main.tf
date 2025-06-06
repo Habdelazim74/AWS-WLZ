@@ -26,6 +26,7 @@ terraform {
     region         = "eu-west-3"
     encrypt        = true
     use_lockfile   = true # Enables lock file, replaces deprecated dynamodb_table
+     profile       = "terraform"
   }
 }
 
