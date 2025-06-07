@@ -25,7 +25,7 @@ terraform {
     key            = "env/dev/terraform.tfstate"
     region         = "eu-west-3"
     encrypt        = true
-    use_lockfile   = true # Enables lock file, replaces deprecated dynamodb_table
+    use_lockfile   = true 
      profile       = "terraform"
   }
 }
