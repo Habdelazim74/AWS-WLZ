@@ -10,12 +10,11 @@ phases:
       - export PATH="$HOME/.tfenv/bin:$PATH"
       - tfenv install 1.6.6
       - tfenv use 1.6.6
-
   pre_build:
     commands:
-      - /usr/bin/terraform --version     
-      - /usr/bin/terraform init
+      - terraform --version
+      - terraform init
   build:
     commands:
-      - /usr/bin/terraform plan -out=tfplan
-      - /usr/bin/terraform apply -auto-approve tfplan
+      - terraform plan -out=tfplan
+      - terraform apply -auto-approve tfplan
