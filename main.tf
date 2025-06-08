@@ -1,6 +1,6 @@
 #Creating VPC using local module
 module "vpc" {
-  source                           = "./modules/vpc"
+  source                           = "./modules/VPC"
   vpc_cidr                         = var.vpc_cidr
   identifier                       = var.project_identifier
   wavelength_subnet_identifier = var.wavelength_subnet_identifier
