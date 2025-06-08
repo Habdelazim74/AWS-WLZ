@@ -7,13 +7,13 @@ phases:
     commands:
       - curl -O https://releases.hashicorp.com/terraform/1.6.6/terraform_1.6.6_linux_amd64.zip
       - unzip terraform_1.6.6_linux_amd64.zip
-      - chmod +x terraform         
-      - mv terraform /usr/local/bin/
+      - chmod +x terraform
+      - mv terraform /usr/bin/terraform 
   pre_build:
     commands:
-      - terraform --version
-      - terraform init
+      - /usr/bin/terraform --version     
+      - /usr/bin/terraform init
   build:
     commands:
-      - terraform plan -out=tfplan
-      - terraform apply -auto-approve tfplan
+      - /usr/bin/terraform plan -out=tfplan
+      - /usr/bin/terraform apply -auto-approve tfplan
